@@ -32,7 +32,7 @@
             btn_stop = new Button();
             btn_reset = new Button();
             textBox_total_time = new TextBox();
-            textBox2 = new TextBox();
+            textBox_delta = new TextBox();
             label1 = new Label();
             label2 = new Label();
             SuspendLayout();
@@ -55,6 +55,7 @@
             btn_stop.TabIndex = 1;
             btn_stop.Text = "Stop";
             btn_stop.UseVisualStyleBackColor = true;
+            btn_stop.Click += btn_stop_Click;
             // 
             // btn_reset
             // 
@@ -64,6 +65,7 @@
             btn_reset.TabIndex = 2;
             btn_reset.Text = "Reset";
             btn_reset.UseVisualStyleBackColor = true;
+            btn_reset.Click += btn_reset_Click;
             // 
             // textBox_total_time
             // 
@@ -72,12 +74,12 @@
             textBox_total_time.Size = new Size(100, 23);
             textBox_total_time.TabIndex = 3;
             // 
-            // textBox2
+            // textBox_delta
             // 
-            textBox2.Location = new Point(21, 90);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 4;
+            textBox_delta.Location = new Point(21, 90);
+            textBox_delta.Name = "textBox_delta";
+            textBox_delta.Size = new Size(100, 23);
+            textBox_delta.TabIndex = 4;
             // 
             // label1
             // 
@@ -93,9 +95,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(21, 72);
             label2.Name = "label2";
-            label2.Size = new Size(74, 15);
+            label2.Size = new Size(34, 15);
             label2.TabIndex = 6;
-            label2.Text = "Elapsed time";
+            label2.Text = "Delta";
             // 
             // Form1
             // 
@@ -104,7 +106,7 @@
             ClientSize = new Size(194, 387);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox2);
+            Controls.Add(textBox_delta);
             Controls.Add(textBox_total_time);
             Controls.Add(btn_reset);
             Controls.Add(btn_stop);
@@ -121,7 +123,7 @@
         private Button btn_stop;
         private Button btn_reset;
         private TextBox textBox_total_time;
-        private TextBox textBox2;
+        private TextBox textBox_delta;
         private Label label1;
         private Label label2;
     }
